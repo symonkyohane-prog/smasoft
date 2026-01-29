@@ -5,16 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Body styling to fill the viewport */
+/* Body styling to fill the viewport and allow scrolling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header styling */
@@ -24,16 +23,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 /* Header text */
 #dat p {
     font-size: 1.2em;
     color: #fff;
-    margin: 0 20px 0 0; /* Margin right for spacing but no wrapping */
-    white-space: nowrap; /* Prevent text wrapping */
+    margin: 0 20px 0 0;
+    white-space: nowrap;
+    flex-shrink: 1;
 }
 
 /* Style the select dropdown */
@@ -44,29 +43,23 @@ header {
     border: 1px solid #ccc;
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap; /* Prevent dropdown from wrapping */
-}
-#linkSelect:hover {
-    border-color: #333;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
 }
 
-/* Main content styling - flex container taking remaining space */
+/* Main content styling */
 #main-div {
-    flex: 1; /* Fill remaining vertical space */
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: center; /* Center items */
     padding: 10px;
-    overflow: auto; /* Allow scrolling if needed within main area */
     background-color: #fff;
 }
 
 /* Individual image container */
 .dv {
     flex: 1 1 200px;
-    max-width: 300px; /* Optional max width for better control */
+    max-width: 300px;
     margin: 10px;
     padding: 10px;
     background-color: #e2e2e2;
@@ -76,15 +69,16 @@ header {
     justify-content: center;
 }
 
-/* Images styling to fit container */
+/* Images styling */
 .dv img {
-    width: 83%;
-    height: 83%;
-    object-fit: cover; /* Ensures image covers container without distortion */
-    border-radius: 8px; /* Optional: rounded edges for images */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Additional styling for #dv1 */
+/* #dv1 styling */
 #dv1 {
     flex-basis: 100%;
     margin-top: 20px;
@@ -111,13 +105,35 @@ header {
     color: #fff;
     text-align: center;
     padding: 15px 0;
-    flex-shrink: 0; /* Prevent footer from shrinking */
+    flex-shrink: 0;
     font-size: 1em;
 }
 
-/* Ensure the entire layout is responsive and fits without scrolls */
+/* Make sure the entire layout is flexible */
 html, body {
-    height: 100%;
+    height: auto;
     width: 100%;
-    overflow: hidden; /* Prevent scrolling on entire page */
+    /* Remove overflow: hidden to allow scrolling on small devices */
+}
+
+/* Media queries for small screens */
+@media (max-width: 600px) {
+    #dat p {
+        font-size: 1em;
+        white-space: normal;
+    }
+
+    #linkSelect {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #main-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dv {
+        max-width: 90%;
+    }
 }
