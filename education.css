@@ -1,0 +1,227 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling to fill the viewport */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Header text */
+#dat p {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 20px 0 0; /* Margin right for spacing but no wrapping */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Style the select dropdown */
+#linkSelect {
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent dropdown from wrapping */
+}
+#linkSelect:hover {
+    border-color: #333;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+/* Footer styling */
+#fot {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    font-size: 1em;
+}
+
+/* Ensure the entire layout is responsive and fits without scrolls */
+#MTL {
+    font-weight: bold;
+  }
+
+  #MTLe {
+    font-weight: bold;
+  }
+
+  #itecs {
+    font-weight: bold;
+  }
+
+  #itec {
+    font-weight: bold;
+  }
+
+  /* Style list items to display images inline with text */
+ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between items */
+}
+
+/* Style the images inside list items */
+.list-icon {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  margin-right: 10px; /* Space between image and text */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.contact-item:hover {
+  background-color: #f0f0f0;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  transition: transform 0.3s;
+}
+
+.contact-link span {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .contact-link span {
+    font-size: 1em;
+  }
+}
+
+
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+
+  
+
+  /* Container for all skills */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    box-sizing: border-box;
+    height: calc(100vh - 200px); /* adjust based on header/footer height */
+    overflow-y: auto;
+  }
+
+  /* Individual skill style */
+  .skill-item {
+    flex: 1 1 200px; /* grow, shrink, basis */
+    max-width: 250px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  .skill-item img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Optional: style the skill text */
+  .skill-text {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  ul {
+  list-style-type: disc !important; /* ensures bullets are shown */
+  padding-left: 20px;     /* space between bullets and text */
+  margin-bottom: 20px;    /* spacing after the list */
+}
+  li {
+    margin-bottom: 8px;
+  }
