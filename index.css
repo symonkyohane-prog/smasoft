@@ -5,42 +5,36 @@
     box-sizing: border-box;
 }
 
-/* Ensure html and body fill the viewport and prevent scrollbars */
+/* Make html and body fill the entire viewport */
 html, body {
-    width: 100%;
     height: 100%;
-    
+    width: 100%;
+    overflow: hidden; /* prevent scrolling if not desired */
 }
 
-/* Body styling to fill the viewport and center content if needed */
+/* Body as flex container to fill full height */
 body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    width: 100%;
-    height: 100%;
 }
 
-/* Header styling */
+/* Header styles */
 header {
     background-color: #4CAF50;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
-    flex-wrap: nowrap;
+    flex-shrink: 0; /* prevent shrinking */
 }
 
-/* Header text */
-#dat p {
+/* Header paragraph style */
+#dat {
     font-size: 1.2em;
     color: #fff;
-    margin: 0 20px 0 0;
     white-space: nowrap;
+    margin-right: 20px;
 }
 
 /* Style the select dropdown */
@@ -58,19 +52,19 @@ header {
     box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-/* Main content area - fills remaining space */
+/* Main content area fills remaining space */
 #main-div {
-    flex: 1; /* Fill remaining vertical space */
+    flex: 1; /* fill remaining space */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
     padding: 10px;
-    overflow: auto; /* Allow internal scrolling if content overflows */
+    overflow: auto; /* allow scrolling inside main area if needed */
     background-color: #fff;
 }
 
-/* Individual image container styles */
+/* Individual image container */
 .dv {
     flex: 1 1 200px;
     max-width: 300px;
@@ -83,15 +77,15 @@ header {
     justify-content: center;
 }
 
-/* Image styling to fit container */
+/* Images styling to fit container */
 .dv img {
     width: 83%;
     height: 83%;
-    object-fit: cover; /* Cover container without distortion */
+    object-fit: cover; /* cover without distortion */
     border-radius: 8px;
 }
 
-/* Specific styling for #dv1 */
+/* Styling for #dv1 */
 #dv1 {
     flex-basis: 100%;
     margin-top: 20px;
@@ -100,7 +94,7 @@ header {
     border-radius: 8px;
 }
 
-/* Heading and paragraph styles inside #dv1 */
+/* Heading and paragraph inside #dv1 */
 #dv1 h4 {
     margin-bottom: 10px;
     color: #333;
@@ -111,12 +105,11 @@ header {
     line-height: 1.5;
 }
 
-/* Footer styling */
+/* Footer styles */
 #fot {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 15px 0;
-    flex-shrink: 0;
-    font-size: 1em;
+    flex-shrink: 0; /* prevent shrinking */
 }
